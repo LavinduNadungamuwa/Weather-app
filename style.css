@@ -4,20 +4,31 @@
     font-family: 'roboto', sans-serif;
     box-sizing: border-box;
 }
-body{
-    background: #222;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #c48de8, #40b7ea); 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.card{
+
+.card {
     width: 90%;
-    max-width: 470px;
-    background: linear-gradient(135deg, #00feba, #5b548a);
-    color: #fff;    
-    margin: 50px auto; 
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.25);
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 40px 35px;
+    padding: 30px;
+    height: auto;
+    max-height: 90vh;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    overflow: auto;
     text-align: center;
 }
+
 .search{
     width: 100%;
     display: flex;
