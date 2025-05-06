@@ -93,6 +93,7 @@ body{
 }
 .error{
     text-align: left;
+    color: rgb(206, 23, 23);
     margin-left: 10px;
     font-size: 14px;
     margin-top: 10px;

@@ -38,11 +38,18 @@ async function checkWeather(city) {
                 weatherIcon.src = "images/snow.png";
         }
 
-        document.querySelector(".weather").style.display = "block"
+        document.querySelector(".weather").style.display = "block";
         document.querySelector(".error").style.display = "none";
         }
 }
 
 searchBtn.addEventListener("click", ()=>{
        checkWeather(searchBox.value); 
-})
+});
+
+searchBox.addEventListener("keypress", (event) => {
+        if (event.key === "Enter") {
+            checkWeather(searchBox.value);
+        }
+});
+    
