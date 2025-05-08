@@ -8,7 +8,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to bottom right, #c48de8, #40b7ea); 
+    background: linear-gradient(to bottom right, #b76fe7, #1fb6f7); 
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -17,8 +17,8 @@ body {
 
 .card {
     width: 90%;
-    max-width: 400px;
-    background: rgba(255, 255, 255, 0.25);
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.215);
     border-radius: 20px;
     padding: 30px;
     height: auto;
@@ -67,7 +67,7 @@ body {
     height: 20px;
 }
 .weather-icon{
-    width: 170px;
+    width: 180px;
     margin-top: 30px;
 }
 .weather h1{
@@ -79,6 +79,21 @@ body {
     font-weight: 400;
     margin-top: -10px;
 }
+
+.weather h3{ 
+    font-size: 24px;
+    font-weight: 500;
+    color: #1d1c1c;
+    text-transform: capitalize;
+    margin-top: 5px;
+}
+
+.weather h4{
+    font-size: 20px;
+    font-weight: 400;
+    color: #393636;
+}
+
 .details{
     display: flex;
     align-items: center;

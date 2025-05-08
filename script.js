@@ -12,6 +12,7 @@ async function checkWeather(city) {
                 document.querySelector(".error").style.display = "block";
                 document.querySelector(".weather").style.display = "none";
                 document.querySelector(".weather-type").innerHTML = data.weather[0].main;
+
         }else{
         var data = await response.json();
 
@@ -38,6 +39,23 @@ async function checkWeather(city) {
         else if(data.weather[0].main == "Snow"){
                 weatherIcon.src = "images/snow.png";
         }
+
+        const nowUTC = new Date().getTime();
+        const localTime = new Date(nowUTC + (data.timezone * 1000));
+        const localHour = localTime.getUTCHours();
+
+        let timeOfDay = "";
+        if (localHour >= 5 && localHour < 12) {
+            timeOfDay = "Morning";
+        } else if (localHour >= 12 && localHour < 17) {
+            timeOfDay = "Afternoon";
+        } else if (localHour >= 17 && localHour < 21) {
+            timeOfDay = "Evening";
+        } else {
+            timeOfDay = "Night";
+        }
+
+        document.querySelector(".time-label").innerHTML = timeOfDay;
 
         document.querySelector(".weather").style.display = "block";
         document.querySelector(".error").style.display = "none";
